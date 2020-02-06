@@ -1,13 +1,17 @@
+import kotlin.io.FilePathComponents
+
 buildscript {
     repositories {
         jcenter()
     }
     
     dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:5.2.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
+apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
@@ -38,3 +42,9 @@ dependencies {
     implementation "io.ktor:ktor-gson:$ktor_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
 }
+
+shadowJar {
+    archiveFileName = 'hacktor.jar'
+}
+
+task stage(dependsOn: ['build', 'shadowJar'])
