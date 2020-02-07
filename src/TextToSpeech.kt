@@ -12,13 +12,15 @@ import com.amazonaws.services.polly.model.OutputFormat
 import com.amazonaws.services.polly.model.SynthesizeSpeechRequest
 import com.amazonaws.services.polly.model.VoiceId
 import com.amazonaws.auth.EnvironmentVariableCredentialsProvider
+import com.amazonaws.regions.Regions
 import java.io.File
 import java.io.FileOutputStream
 
 @Location("/textToSpeech/{name}")
 data class TextSpeech(val name: String)
 
-var client = AmazonPollyClientBuilder.standard().withCredentials(EnvironmentVariableCredentialsProvider()).build()
+var client = AmazonPollyClientBuilder.standard().withRegion(Regions.US_WEST_2)
+    .withCredentials(EnvironmentVariableCredentialsProvider()).build()
 
 fun Route.textToSpeech() {
     get<TextSpeech> {
