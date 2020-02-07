@@ -13,6 +13,19 @@ $ heroku open
 ```
 * deployed here already: [https://evening-fortress-09301.herokuapp.com/json/gson](https://evening-fortress-09301.herokuapp.com/json/gson)
 
+[https://evening-fortress-09301.herokuapp.com/]
+```HELLO WORLD!```
+[https://evening-fortress-09301.herokuapp.com/json/gson]
+```
+{
+hello: "world"
+}
+```
+[http://evening-fortress-09301.herokuapp.com/type/word/list/4] 
+```Inside List(type=Type(name=word), page=4)```
+[https://evening-fortress-09301.herokuapp.com/type/meh/edit] 
+```Inside Edit(type=Type(name=meh))```
+
 
 ## References (to explore)
 https://ktor.io/quickstart/guides/api.html
