@@ -38,12 +38,13 @@ dependencies {
     implementation "io.ktor:ktor-locations:$ktor_version"
     implementation "io.ktor:ktor-auth:$ktor_version"
     implementation "io.ktor:ktor-gson:$ktor_version"
-    implementation "com.amazonaws:aws-java-sdk-polly:$polly_version"
+    implementation "com.amazonaws:aws-java-sdk:$polly_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
 }
 
 shadowJar {
     archiveFileName = 'hacktor.jar'
+    zip64 true
 }
 
 task stage(dependsOn: ['build', 'shadowJar'])
