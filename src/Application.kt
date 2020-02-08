@@ -63,6 +63,8 @@ fun Application.module(testing: Boolean = false) {
         textToSpeech()
 
         translate()
+
+        content()
     }
 }
 
