@@ -27,8 +27,10 @@ Inside List(type=Type(name=word), page=4)
 Inside Edit(type=Type(name=meh))
 
 * [https://evening-fortress-09301.herokuapp.com/textToSpeech/Tim,%20tamer%20of%20Polly](https://evening-fortress-09301.herokuapp.com/textToSpeech/Tim,%20tamer%20of%20Polly) 
-This wil read out a text for you, synthesized by Amazon Polly
+This will read out a text for you, synthesized by Amazon Polly
 
+* [https://evening-fortress-09301.herokuapp.com/translate/de/Roboter%20überall/en](https://evening-fortress-09301.herokuapp.com/translate/de/Roboter%20überall/en)
+This translate a text from an input language (here: `de`/German) to an output language (here: `en`/English) using Amazon Translate
 
 
 ## References (to explore)

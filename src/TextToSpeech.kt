@@ -19,7 +19,7 @@ import java.io.FileOutputStream
 @Location("/textToSpeech/{name}")
 data class TextSpeech(val name: String)
 
-var client = AmazonPollyClientBuilder.standard().withRegion(Regions.US_WEST_2)
+var pollyClient = AmazonPollyClientBuilder.standard().withRegion(Regions.US_WEST_2)
     .withCredentials(EnvironmentVariableCredentialsProvider()).build()
 
 fun Route.textToSpeech() {
@@ -31,7 +31,7 @@ fun Route.textToSpeech() {
             .withText("This is a sample text to be synthesized for ${it.name}.")
         try {
             FileOutputStream(File(outputFileName)).use { outputStream ->
-                val synthesizeSpeechResult = client.synthesizeSpeech(synthesizeSpeechRequest)
+                val synthesizeSpeechResult = pollyClient.synthesizeSpeech(synthesizeSpeechRequest)
                 val buffer = ByteArray(2 * 1024)
                 var readBytes: Int
                 synthesizeSpeechResult.audioStream.use { `in` ->

@@ -38,7 +38,8 @@ dependencies {
     implementation "io.ktor:ktor-locations:$ktor_version"
     implementation "io.ktor:ktor-auth:$ktor_version"
     implementation "io.ktor:ktor-gson:$ktor_version"
-    implementation "com.amazonaws:aws-java-sdk-polly:$polly_version"
+    implementation "com.amazonaws:aws-java-sdk-polly:$amzn_sdk_version"
+    implementation "com.amazonaws:aws-java-sdk-translate:$amzn_sdk_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
 }
 
