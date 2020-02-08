@@ -32,6 +32,8 @@ This will read out a text for you, synthesized by Amazon Polly
 * [https://evening-fortress-09301.herokuapp.com/translate/de/Roboter%20überall/en](https://evening-fortress-09301.herokuapp.com/translate/de/Roboter%20überall/en)
 This translate a text from an input language (here: `de`/German) to an output language (here: `en`/English) using Amazon Translate
 
+* [https://evening-fortress-09301.herokuapp.com/content/<module_UUID>/unit/<unit_UUID>](https://evening-fortress-09301.herokuapp.com/content/02567947-9285-2e02-4468-1866e93b4cfa/unit/02567947-9285-2e5c-76b5-f5e75eb0dead)
+This retrieves public Trailhead content for a given unit
 
 ## References (to explore)
 https://ktor.io/quickstart/guides/api.html
